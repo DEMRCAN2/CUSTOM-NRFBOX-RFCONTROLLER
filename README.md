@@ -6,14 +6,14 @@ A customized version of the **nRFBox v2.5.0** project featuring a custom hardwar
 
 ## ✨ What's Custom in This Build?
 * **Custom UI & Animations:** Redesigned interface with smooth custom animations and visual tweaks.
-* **Custom Hardware / Design:** Built with a tailored layout/enclosure designed from scratch.
+* **Custom Hardware / Design:** Built with a tailored layout/enclosure designed from original nrbox by cifertech
 * **Firmware Tweaks:** Optimized code for better responsiveness and custom functionality.
 
 ## 🛠️ Hardware Used
-* **MCU:** ESP32 *(update if you used a different board)*
+* **MCU:** ESP32 
 * **Transceiver:** nRF24L01+ (PA+LNA)
-* **Display:** OLED SSD1306 / SH1106 *(keep the one you used)*
-* **Controls:** Custom button layout / Rotary encoder
+* **Display:** OLED SSD1306 
+* **Controls:** Custom button layout 
    ```
 2. Open the project in **Arduino IDE** or **PlatformIO**.
 3. Install the required libraries (`RF24`, `Adafruit_GFX`, `Adafruit_SSD1306`, etc.).
