@@ -1,0 +1,52 @@
+## 📌 Pin Layouts
+
+### 📡 nRF24L01+ Modules (Shared SPI + Individual CE/CSN)
+All three nRF24 modules share the same SPI bus (`SCK`, `MOSI`, `MISO`) and power lines, while using separate `CE` and `CSN` pins:
+
+| Module / Pin | ESP32 GPIO | Notes |
+| :--- | :--- | :--- |
+| **VCC** | `3.3V` | Use a dedicated 3.3V regulator (e.g., LF33) |
+| **GND** | `GND` | Common ground |
+| **SCK** | `GPIO 18` | Shared across all nRF24 modules |
+| **MOSI** | `GPIO 23` | Shared across all nRF24 modules |
+| **MISO** | `GPIO 19` | Shared across all nRF24 modules |
+| **IRQ** | `Not Connected` | Unused |
+| **Radio 1 - CE** | `GPIO 5` | Primary module |
+| **Radio 1 - CSN** | `GPIO 17` | Primary module (TX2) |
+| **Radio 2 - CE** | `GPIO 16` | Secondary module (RX2) |
+| **Radio 2 - CSN** | `GPIO 4` | Secondary module |
+| **Radio 3 - CE** | `GPIO 15` | Tertiary module |
+| **Radio 3 - CSN** | `GPIO 2` | Tertiary module |
+
+---
+
+### 📺 0.96" OLED Display (I2C)
+
+| OLED Pin | ESP32 GPIO |
+| :--- | :--- |
+| **VCC** | `3.3V` |
+| **GND** | `GND` |
+| **SDA** | `GPIO 21` |
+| **SCL** | `GPIO 22` |
+
+---
+
+### ⌨️ Navigation Push Buttons (Active Low / Common GND)
+
+| Button Function | ESP32 GPIO |
+| :--- | :--- |
+| **UP** | `GPIO 26` |
+| **DOWN** | `GPIO 33` |
+| **LEFT** | `GPIO 25` |
+| **RIGHT** | `GPIO 27` |
+| **OK / SELECT** | `GPIO 32` |
+
+---
+
+### 💡 NeoPixel LED (WS2812)
+
+| NeoPixel Pin | ESP32 GPIO |
+| :--- | :--- |
+| **VCC** | `3.3V / 5V` |
+| **GND** | `GND` |
+| **DIN** | `GPIO 14` |
